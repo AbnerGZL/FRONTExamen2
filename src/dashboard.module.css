@@ -1,0 +1,311 @@
+/* Dashboard.module.css - Rediseño con nueva paleta de colores */
+.dashboardContainer {
+  min-height: 100vh;
+  background: #f5f7fa;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #2d3748;
+}
+
+.dashboardHeader {
+  background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+  color: white;
+  padding: 1.2rem 2.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.dashboardTitle {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.dashboardContent {
+  max-width: 1400px;
+  margin: 2.5rem auto;
+  padding: 0 2rem;
+}
+
+.welcomeCard {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  margin-bottom: 2.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(4px);
+}
+
+.welcomeTitle {
+  color: #2d3748;
+  font-size: 1.5rem;
+  margin-bottom: 1.2rem;
+  font-weight: 600;
+}
+
+.welcomeCard p {
+  color: #4a5568;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.messageCard {
+  background: rgba(237, 242, 247, 0.9);
+  border-left: 5px solid #3498db;
+  padding: 1.5rem;
+  border-radius: 0 10px 10px 0;
+  margin-bottom: 2.5rem;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.messageTitle {
+  color: #2d3748;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.messageContent {
+  color: #2d3748;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+.logoutButton {
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  backdrop-filter: blur(4px);
+}
+
+.logoutButton:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.logoutButton svg {
+  transition: transform 0.3s ease;
+}
+
+.logoutButton:hover svg {
+  transform: scale(1.1);
+}
+
+.dashboardMain {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 2.5rem;
+}
+
+.sidebar {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  padding: 1.8rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  height: fit-content;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(4px);
+}
+
+.sidebar h3 {
+  color: #2d3748;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid #e2e8f0;
+  font-weight: 600;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  padding: 0.8rem 0;
+  border-bottom: 1px solid #edf2f7;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 500;
+  color: #4a5568;
+}
+
+.sidebar li:hover {
+  color: #3498db;
+  transform: translateX(5px);
+}
+
+.mainContent {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(4px);
+}
+
+.mainContent h2 {
+  color: #2d3748;
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.table thead {
+  background: linear-gradient(to right, #2c3e50, #4ca1af);
+  color: #fff;
+}
+
+.table th {
+  padding: 1.2rem 1.5rem;
+  text-align: left;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.table td {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #edf2f7;
+  color: #4a5568;
+}
+
+.table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.table tbody tr:hover {
+  background-color: #f8fafc;
+}
+
+button {
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-right: 0.5rem;
+}
+
+button:last-child {
+  margin-right: 0;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Botones específicos */
+button[onClick*="agregar"] {
+  background: linear-gradient(to right, #2ecc71, #27ae60);
+  color: white;
+  margin-bottom: 1.5rem;
+}
+
+button[onClick*="agregar"]:hover {
+  background: linear-gradient(to right, #27ae60, #219653);
+}
+
+button[onClick*="editar"], 
+button[onClick*="Editar"] {
+  background: #3498db;
+  color: white;
+}
+
+button[onClick*="editar"]:hover, 
+button[onClick*="Editar"]:hover {
+  background: #2980b9;
+}
+
+button[onClick*="eliminar"], 
+button[onClick*="Eliminar"] {
+  background: #e74c3c;
+  color: white;
+}
+
+button[onClick*="eliminar"]:hover, 
+button[onClick*="Eliminar"]:hover {
+  background: #c0392b;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .dashboardMain {
+      grid-template-columns: 1fr;
+  }
+  
+  .sidebar {
+      order: 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboardHeader {
+      flex-direction: column;
+      gap: 1.2rem;
+      text-align: center;
+      padding: 1.5rem;
+  }
+  
+  .dashboardContent {
+      padding: 0 1.5rem;
+  }
+  
+  .table {
+      display: block;
+      overflow-x: auto;
+  }
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Efecto de vidrio (glassmorphism) para versión moderna */
+@media (min-width: 768px) {
+  .welcomeCard,
+  .sidebar,
+  .mainContent {
+      background: rgba(255, 255, 255, 0.88);
+  }
+}

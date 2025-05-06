@@ -1,0 +1,170 @@
+/* Register.module.css - Rediseño con nueva paleta de colores */
+.registerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+  padding: 20px;
+}
+
+.registerForm {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 450px;
+  animation: fadeIn 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.registerTitle {
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 2.2rem;
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.inputGroup {
+  margin-bottom: 1.8rem;
+  position: relative;
+}
+
+.inputLabel {
+  display: block;
+  color: #34495e;
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.inputField {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: 1px solid #dfe6e9;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #2d3436;
+}
+
+.inputField:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.inputField::placeholder {
+  color: #b2bec3;
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2.8rem;
+  gap: 1rem;
+}
+
+.registerSubmitButton {
+  background: linear-gradient(to right, #2ecc71, #27ae60);
+  color: white;
+  border: none;
+  padding: 0.85rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex: 1;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.registerSubmitButton:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 14px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(to right, #27ae60, #219653);
+}
+
+.registerSubmitButton:disabled {
+  background: #95a5a6;
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+.loginButton {
+  background: transparent;
+  color: #3498db;
+  border: 2px solid #3498db;
+  padding: 0.85rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex: 1;
+  letter-spacing: 0.5px;
+}
+
+.loginButton:hover:not(:disabled) {
+  background: rgba(52, 152, 219, 0.1);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: #2980b9;
+  border-color: #2980b9;
+}
+
+.loginButton:disabled {
+  border-color: #95a5a6;
+  color: #95a5a6;
+  cursor: not-allowed;
+}
+
+.errorMessage {
+  color: #e74c3c;
+  font-size: 0.9rem;
+  margin: -0.5rem 0 1.5rem;
+  padding: 0.5rem;
+  background: rgba(231, 76, 60, 0.1);
+  border-radius: 6px;
+  text-align: center;
+  animation: shake 0.5s ease-in-out;
+}
+
+.passwordHint {
+  color: #7f8c8d;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(30px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-5px); }
+  40%, 80% { transform: translateX(5px); }
+}
+
+/* Efecto de vidrio (glassmorphism) para versión moderna */
+@media (min-width: 768px) {
+  .registerForm {
+      background: rgba(255, 255, 255, 0.85);
+  }
+}

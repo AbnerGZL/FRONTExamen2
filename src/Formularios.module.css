@@ -1,0 +1,216 @@
+/* Formularios.module.css - Estilos para ambos formularios */
+
+.formContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+    padding: 2rem;
+}
+
+.formCard {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 16px;
+    padding: 2.5rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 500px;
+    animation: fadeIn 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.formTitle {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.formLabel {
+    color: #34495e;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.formInput, .formSelect {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    border: 1px solid #dfe6e9;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #2d3436;
+}
+
+.formInput:focus, .formSelect:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.formSelect {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1em;
+}
+
+.buttonGroup {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+    gap: 1rem;
+}
+
+.primaryButton {
+    background: linear-gradient(to right, #2ecc71, #27ae60);
+    color: white;
+    border: none;
+    padding: 0.85rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex: 1;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.primaryButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 14px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(to right, #27ae60, #219653);
+}
+
+.secondaryButton {
+    background: transparent;
+    color: #3498db;
+    border: 2px solid #3498db;
+    padding: 0.85rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex: 1;
+    letter-spacing: 0.5px;
+}
+
+.secondaryButton:hover {
+    background: rgba(52, 152, 219, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #2980b9;
+    border-color: #2980b9;
+}
+
+.successMessage {
+    color: #27ae60;
+    font-size: 0.9rem;
+    padding: 0.8rem;
+    background: rgba(39, 174, 96, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid #27ae60;
+}
+
+.errorMessage {
+    color: #e74c3c;
+    font-size: 0.9rem;
+    padding: 0.8rem;
+    background: rgba(231, 76, 60, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid #e74c3c;
+    animation: shake 0.5s ease-in-out;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20%, 60% { transform: translateX(-5px); }
+    40%, 80% { transform: translateX(5px); }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .formCard {
+        padding: 1.5rem;
+    }
+    
+    .buttonGroup {
+        flex-direction: column;
+    }
+}
+
+/* Estilos adicionales para los formularios de edición */
+
+/* Estilo para el input de fecha */
+input[type="date"] {
+    appearance: none;
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1.2em;
+    padding-right: 2.5rem;
+}
+
+/* Mejoras para el formulario de evento */
+.formTitle {
+    margin-bottom: 1.5rem;
+}
+
+.form {
+    gap: 1.2rem;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 480px) {
+    .formCard {
+        padding: 1.2rem;
+    }
+    
+    .formTitle {
+        font-size: 1.5rem;
+    }
+    
+    .formInput, .formSelect {
+        padding: 0.7rem 0.9rem;
+    }
+    
+    .primaryButton, .secondaryButton {
+        padding: 0.7rem 1rem;
+        font-size: 0.9rem;
+    }
+}
