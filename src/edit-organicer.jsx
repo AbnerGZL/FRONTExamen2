@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import styles from './Formularios.module.css'; // Mismo archivo CSS compartido
 
 const EditOrganizadorForm = () => { 
-    const apiUrl = process.env.URI;
+    const apiUrl = import.meta.env.VITE_API_URL;
     const { id } = useParams();
     const [nombre, setNombre] = useState('');
     const [mensaje, setMensaje] = useState('');

@@ -2,7 +2,7 @@ import { useState } from 'react';
 import styles from './Formularios.module.css'; // Mismo archivo CSS
 
 const FormOrganizador = () => {
-  const apiUrl = process.env.URI;
+  const apiUrl = import.meta.env.VITE_API_URL;
   const [nombre, setNombre] = useState('');
   const [mensaje, setMensaje] = useState('');
 

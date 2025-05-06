@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import styles from './login.module.css';
 
 function Login() {
-  const apiUrl = process.env.URI;
+  const apiUrl = import.meta.env.VITE_API_URL;
   const navigate = useNavigate();
   const [user, setUser] = useState({
     username: '',

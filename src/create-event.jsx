@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import styles from './Formularios.module.css';
 
 export default function CrearEvento() {
-  const apiUrl = process.env.URI;
+  const apiUrl = import.meta.env.VITE_API_URL;
   const home = () => {
     window.history.back();
   };

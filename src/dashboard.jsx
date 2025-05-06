@@ -3,7 +3,7 @@ import { useNavigate, useSearchParams } from 'react-router-dom';
 import styles from './Dashboard.module.css';
 
 function Dashboard() {
-  const apiUrl = process.env.URI;
+  const apiUrl = import.meta.env.VITE_API_URL;
   const [message, setMessage] = useState('');
   const [searchParams] = useSearchParams();
   const [eventos, setEventos] = useState([]);
