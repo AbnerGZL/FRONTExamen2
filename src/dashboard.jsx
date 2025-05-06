@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
-import styles from './Dashboard.module.css';
+import styles from './dashboard.module.css';
 
 function Dashboard() {
   const apiUrl = import.meta.env.VITE_API_URL;
